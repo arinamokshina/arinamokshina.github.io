@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arina Mokshina | Environmental Designer & Concept Artist</title>
-    <meta name="description" content="Professional portfolio of Arina Mokshina - Environmental Designer with expertise in interior and architectural concepts.">
+    <meta name="description" content="Professional portfolio of Arina Mokshina - Environmental Designer with expertise in interior and architectural concepts. Winner of Golden Trezzini and Young Design Awards.">
     <meta name="keywords" content="Arina Mokshina, environmental designer, concept artist, interior design, architecture, portfolio">
     <meta name="author" content="Arina Mokshina">
     <meta property="og:title" content="Arina Mokshina | Design & Art">
@@ -21,7 +21,7 @@
             --text-secondary: #555;
             --footer-border: #e0e0e0;
             --image-gap: 5px;
-            --side-padding: 20px;
+            --side-padding: 5vw; /* Изменено на vw для адаптивных отступов */
             --row-gap: 60px;
         }
         
@@ -91,28 +91,7 @@
             z-index: -1;
         }
         
-        @media (prefers-color-scheme: dark) {
-            .hero::before {
-                background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url(images/hero-bg.jpg) center/cover no-repeat;
-                filter: brightness(0.9) contrast(1.1);
-            }
-            
-            body {
-                background: #121212;
-                color: #f0f0f0;
-            }
-            
-            :root {
-                --text: #f0f0f0;
-                --text-secondary: #aaa;
-                --footer-border: #333;
-            }
-            
-            header {
-                background: rgba(18,18,18,.9);
-                border-bottom: 1px solid #333;
-            }
-        }
+        /* Удален медиа-запрос для темной темы, чтобы сохранить светлый дизайн */
         
         .hero-content {
             max-width: 540px;
@@ -186,13 +165,6 @@
             background: #f8f8f8;
         }
         
-        @media (prefers-color-scheme: dark) {
-            .project-image-container {
-                border-color: #333;
-                background: #1a1a1a;
-            }
-        }
-        
         .project-image {
             position: absolute;
             top: 0;
@@ -261,9 +233,15 @@
             color: var(--text-secondary);
         }
         
+        @media (max-width: 1600px) {
+            :root {
+                --side-padding: 5%;
+            }
+        }
+        
         @media (max-width: 1200px) {
             :root {
-                --side-padding: 20px;
+                --side-padding: 5%;
             }
         }
         
