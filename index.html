@@ -21,7 +21,7 @@
             --text-secondary: #555;
             --footer-border: #e0e0e0;
             --image-gap: 5px;
-            --side-padding: 5vw; /* Изменено на vw для адаптивных отступов */
+            --side-padding: 15px; /* Базовые отступы для мобильных */
             --row-gap: 60px;
         }
         
@@ -43,7 +43,7 @@
         
         .container {
             width: 100%;
-            max-width: 1800px;
+            max-width: 2200px;
             margin: 0 auto;
             padding: 0 var(--side-padding);
         }
@@ -90,8 +90,6 @@
             background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.3)), url(images/hero-bg.jpg) center/cover no-repeat;
             z-index: -1;
         }
-        
-        /* Удален медиа-запрос для темной темы, чтобы сохранить светлый дизайн */
         
         .hero-content {
             max-width: 540px;
@@ -194,7 +192,7 @@
             left: 50%;
             transform: translateX(-50%);
             width: calc(100% - var(--side-padding)*2);
-            max-width: 1800px;
+            max-width: 2200px;
             height: 1px;
             background: var(--footer-border);
         }
@@ -233,15 +231,22 @@
             color: var(--text-secondary);
         }
         
-        @media (max-width: 1600px) {
+        /* Адаптивные отступы */
+        @media (min-width: 600px) {
             :root {
-                --side-padding: 5%;
+                --side-padding: 20px;
             }
         }
         
-        @media (max-width: 1200px) {
+        @media (min-width: 900px) {
             :root {
-                --side-padding: 5%;
+                --side-padding: 30px;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            :root {
+                --side-padding: 40px;
             }
         }
         
